@@ -21,17 +21,17 @@ jobs:
         uses: ErenKrt/ssh-push@1.3
         with:
           # IP Address of remote host
-          host: home.dobrastronka.pl
+          host: ${{ secrets.HOST }}
           # Port of SSH Protocol
-          port: 22222
+          port: ${{ secrets.PORT }}
           # Username of SSH user
-          username: pi
+          username: ${{ secrets.USER }}
           # Password of user
-          password: ${{ secrets.PI_SSH_PASSWORD }}
+          password: ${{ secrets.PASSWORD }}
           # Folder/File to be transferred
-          source: ./src
+          source: "./src"
           # Destination of source archive file
-          destination: ~/workspace/eko-waste-table/src
+          destination: "~/workspace/eko-waste-table/src"
           # Execute commands after transfer source file
           scripts: echo "ok"
 
