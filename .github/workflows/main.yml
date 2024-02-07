@@ -29,7 +29,7 @@ jobs:
           # Password of user
           password: ${{ secrets.PI_SSH_PASSWORD }}
           # Folder/File to be transferred
-          source: src
+          source: ./src
           # Destination of source archive file
           destination: ~/workspace/eko-waste-table/src
           # Execute commands after transfer source file
