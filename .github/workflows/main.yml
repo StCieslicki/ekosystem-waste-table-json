@@ -5,7 +5,7 @@
 #
 
 
-            - name: SSH Push
+- name: SSH Push
   # You may pin to the exact commit or the version.
   # uses: ErenKrt/ssh-push@cea145c9f5cc7a0a12e8151ac946e6d2fe565fd7
   uses: ErenKrt/ssh-push@1.3
