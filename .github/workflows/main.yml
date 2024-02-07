@@ -33,8 +33,8 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
           destination: "/home/pi/workspace/eko-waste-table/web.zip"
-          scripts: unzip /home/pi/workspace/eko-waste-table/web.zip -d /home/pi/workspace/eko-waste-table/
-#          scripts: unzip /home/pi/workspace/eko-waste-table/web.zip -d /home/pi/workspace/eko-waste-table/ && docker compose up -d --build
+#          scripts: unzip /home/pi/workspace/eko-waste-table/web.zip -d /home/pi/workspace/eko-waste-table/
+          scripts: unzip /home/pi/workspace/eko-waste-table/web.zip -d /home/pi/workspace/eko-waste-table/ && docker compose up -d --build
 
 #      - name: SSH Dockerfile
 #        uses: ErenKrt/ssh-push@main
