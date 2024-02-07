@@ -20,6 +20,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: "./package*"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "packages files copied"
@@ -30,6 +31,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: "./Dockefile"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "Dockerfile file copied"
@@ -40,6 +42,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: "./dockerignore"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo ".dockerignore file copied"
@@ -50,6 +53,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: "./compose.yaml"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "compose.yaml file copied"
@@ -60,6 +64,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: "./tsconfig.json"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "tsconfig.json file copied"
@@ -70,6 +75,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           source: "./src"
           destination: "/home/pi/workspace/eko-waste-table/src"
           scripts: echo "ok"
