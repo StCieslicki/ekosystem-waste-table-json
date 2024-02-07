@@ -27,7 +27,7 @@ jobs:
           # Username of SSH user
           username: pi
           # Password of user
-          password: xyz
+          password: ${{ secrets.PI_SSH_PASSWORD }}
           # Folder/File to be transferred
           source: src
           # Destination of source archive file
