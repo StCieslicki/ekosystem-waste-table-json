@@ -23,64 +23,64 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package.json"
-          destination: "/home/pi/workspace/eko-waste-table/package.json"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/"
+          destination: "/home/pi/workspace/eko-waste-table/web.zip"
           scripts: echo "packages files copied"
 
-      - name: SSH Dockerfile
-        uses: ErenKrt/ssh-push@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/Dockefile"
-          destination: "/home/pi/workspace/eko-waste-table/Dockefile"
-          scripts: echo "Dockerfile file copied"
-
-      - name: SSH .dockerignore
-        uses: ErenKrt/ssh-push@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore"
-          destination: "/home/pi/workspace/eko-waste-table/.dockerignore"
-          scripts: echo ".dockerignore file copied"
-
-      - name: SSH compose.yaml
-        uses: ErenKrt/ssh-push@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml"
-          destination: "/home/pi/workspace/eko-waste-table/compose.yaml"
-          scripts: echo "compose.yaml file copied"
-
-      - name: SSH tsconfig.json
-        uses: ErenKrt/ssh-push@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tsconfig.json"
-          destination: "/home/pi/workspace/eko-waste-table/tsconfig.json"
-          scripts: echo "tsconfig.json file copied"
-
-      - name: SSH src
-        uses: ErenKrt/ssh-push@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src/"
-          destination: "/home/pi/workspace/eko-waste-table/src/"
-          scripts: echo "ok"
+#      - name: SSH Dockerfile
+#        uses: ErenKrt/ssh-push@main
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USER }}
+#          password: ${{secrets.PASSWORD }}
+#          port: ${{ secrets.PORT }}
+#          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/Dockefile"
+#          destination: "/home/pi/workspace/eko-waste-table/Dockefile"
+#          scripts: echo "Dockerfile file copied"
+#
+#      - name: SSH .dockerignore
+#        uses: ErenKrt/ssh-push@main
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USER }}
+#          password: ${{secrets.PASSWORD }}
+#          port: ${{ secrets.PORT }}
+#          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore"
+#          destination: "/home/pi/workspace/eko-waste-table/.dockerignore"
+#          scripts: echo ".dockerignore file copied"
+#
+#      - name: SSH compose.yaml
+#        uses: ErenKrt/ssh-push@main
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USER }}
+#          password: ${{secrets.PASSWORD }}
+#          port: ${{ secrets.PORT }}
+#          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml"
+#          destination: "/home/pi/workspace/eko-waste-table/compose.yaml"
+#          scripts: echo "compose.yaml file copied"
+#
+#      - name: SSH tsconfig.json
+#        uses: ErenKrt/ssh-push@main
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USER }}
+#          password: ${{secrets.PASSWORD }}
+#          port: ${{ secrets.PORT }}
+#          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tsconfig.json"
+#          destination: "/home/pi/workspace/eko-waste-table/tsconfig.json"
+#          scripts: echo "tsconfig.json file copied"
+#
+#      - name: SSH src
+#        uses: ErenKrt/ssh-push@main
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USER }}
+#          password: ${{secrets.PASSWORD }}
+#          port: ${{ secrets.PORT }}
+#          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src/"
+#          destination: "/home/pi/workspace/eko-waste-table/src/"
+#          scripts: echo "ok"
 
 #name: SSH PUSH
 #
