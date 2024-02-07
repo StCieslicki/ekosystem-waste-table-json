@@ -14,14 +14,16 @@ jobs:
         with:
           node-version: 20
 
-      - name: SSH package*
+#      - name: Catalog list
+
+      - name: SSH package.json
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./package*"
+          source: "./package.json"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "packages files copied"
 
