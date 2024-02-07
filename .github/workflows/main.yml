@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./package.json"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package.json"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "packages files copied"
 
@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./Dockefile"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/Dockefile"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "Dockerfile file copied"
 
@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./dockerignore"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo ".dockerignore file copied"
 
@@ -56,7 +56,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./compose.yaml"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "compose.yaml file copied"
 
@@ -67,7 +67,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./tsconfig.json"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tsconfig.json"
           destination: "/home/pi/workspace/eko-waste-table/"
           scripts: echo "tsconfig.json file copied"
 
@@ -78,8 +78,8 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./src"
-          destination: "/home/pi/workspace/eko-waste-table/src"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src"
+          destination: "/home/pi/workspace/eko-waste-table/src/"
           scripts: echo "ok"
 
 #name: SSH PUSH
