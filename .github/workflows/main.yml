@@ -18,7 +18,7 @@ jobs:
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           source: "./package*"
           destination: "/home/pi/workspace/eko-waste-table/"
@@ -28,7 +28,7 @@ jobs:
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           source: "./Dockefile"
           destination: "/home/pi/workspace/eko-waste-table/"
@@ -38,7 +38,7 @@ jobs:
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           source: "./dockerignore"
           destination: "/home/pi/workspace/eko-waste-table/"
@@ -48,7 +48,7 @@ jobs:
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           source: "./compose.yaml"
           destination: "/home/pi/workspace/eko-waste-table/"
@@ -58,7 +58,7 @@ jobs:
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           source: "./tsconfig.json"
           destination: "/home/pi/workspace/eko-waste-table/"
@@ -68,7 +68,7 @@ jobs:
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           source: "./src"
           destination: "/home/pi/workspace/eko-waste-table/src"
