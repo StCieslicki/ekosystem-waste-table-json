@@ -16,15 +16,14 @@ jobs:
 
       - run: mkdir -p "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
       - run: cp -r "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package.json" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package-lock.json" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/Dockerfile" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tsconfig.json" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
-#      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
-#      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
 
-
-      - name: SSH package.json
+      - name: SSH push
         uses: ErenKrt/ssh-push@main
         with:
           host: ${{ secrets.HOST }}
@@ -34,6 +33,7 @@ jobs:
           source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
           destination: "/home/pi/workspace/eko-waste-table/web.zip"
           scripts: unzip /home/pi/workspace/eko-waste-table/web.zip -d /home/pi/workspace/eko-waste-table/
+#          scripts: unzip /home/pi/workspace/eko-waste-table/web.zip -d /home/pi/workspace/eko-waste-table/ && docker compose up -d --build
 
 #      - name: SSH Dockerfile
 #        uses: ErenKrt/ssh-push@main
