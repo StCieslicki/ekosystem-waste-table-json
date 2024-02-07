@@ -14,7 +14,15 @@ jobs:
         with:
           node-version: 20
 
-#      - name: Catalog list
+      - run: mkdir -p "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/Dockerfile" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tsconfig.json" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+#      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+#      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+
 
       - name: SSH package.json
         uses: ErenKrt/ssh-push@main
@@ -23,9 +31,9 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/"
+          source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
           destination: "/home/pi/workspace/eko-waste-table/web.zip"
-          scripts: echo "packages files copied"
+          scripts: echo "packages files copied" | unzip /home/pi/workspace/eko-waste-table/web.zip
 
 #      - name: SSH Dockerfile
 #        uses: ErenKrt/ssh-push@main
