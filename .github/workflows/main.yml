@@ -33,7 +33,7 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
           destination: "/home/pi/workspace/eko-waste-table/web.zip"
-          scripts: echo "packages files copied" | unzip /home/pi/workspace/eko-waste-table/web.zip
+          scripts: unzip /home/pi/workspace/eko-waste-table/web.zip
 
 #      - name: SSH Dockerfile
 #        uses: ErenKrt/ssh-push@main
