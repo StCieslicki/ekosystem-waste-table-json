@@ -15,7 +15,7 @@ jobs:
           node-version: 20
 
       - run: mkdir -p "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package"
-      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
+      - run: cp -r "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/src" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/Dockerfile" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
