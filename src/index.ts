@@ -13,11 +13,14 @@ app.use(cache('1 day'));
 const port = 3000;
 
 app.get('/', async (req, res) => {
-  const { street } = req.query;
+  const { street, ids } = req.query;
 
-  if (street && (street as string).length >= 3) {
+  if ((street && (street as string).length >= 3) || (ids && (ids as string).length > 0)) {
     try {
-      res.send(await getWasteTable({street: (street as string)}));
+      res.send(await getWasteTable({
+        street: (street as string),
+        ids: ids ? (ids as string).split(',') : []
+      }));
     } catch (error) {
       console.error(error);
 
