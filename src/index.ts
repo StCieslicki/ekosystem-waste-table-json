@@ -1,4 +1,4 @@
-import {getWasteTable} from "./service/parse";
+import {getWasteTable} from "./handler";
 
 import * as express from 'express';
 import * as compression from 'compression';
