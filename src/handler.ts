@@ -1,13 +1,9 @@
 import {HTMLElement} from 'node-html-parser';
 import {getHtmlSite} from "./service/externalSite";
 import {
+    createResultItem,
     filterByStreet,
-    getRowDate,
-    getRowEstate,
-    getRowGeo,
-    getRowId,
     getRows,
-    getRowStreet,
     sortByStreet
 } from "./service/parse";
 
@@ -28,13 +24,7 @@ export async function getWasteTable({street: filter, ids}: {street: string; ids?
         const response: Result[] = [];
 
         (rows as HTMLElement[])?.forEach((row: HTMLElement) => {
-            const id: number = getRowId(row);
-            const street: string = getRowStreet(row);
-            const date: string = getRowDate(row);
-            const estate: string = getRowEstate(row);
-            const geo = getRowGeo(row);
-
-            response.push({id, street, date, estate, geo});
+            response.push(createResultItem(row));
         });
 
         if (filter) {
