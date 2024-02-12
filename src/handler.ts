@@ -1,21 +1,21 @@
-import {HTMLElement} from 'node-html-parser';
-import {getHtmlSite} from "./service/externalSite";
+import { HTMLElement } from 'node-html-parser';
+import { getHtmlSite } from './service/externalSite';
 import {
     createResultItem,
     filterByStreet,
     getRows,
     sortByStreet
-} from "./service/parse";
+} from './service/parse';
 
 export interface Result {
     id: number;
     street: string,
     date: string,
     estate: string,
-    geo: {lat: string; lng: string}
+    geo: { lat: string; lng: string }
 }
 
-export async function getWasteTable({street: filter, ids}: {street: string; ids?: string[]}): Promise<Result[]> {
+export async function getWasteTable({ street: filter, ids }: { street: string; ids?: string[]}): Promise<Result[]> {
     try {
         const data = await getHtmlSite();
 

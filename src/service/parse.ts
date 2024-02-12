@@ -1,6 +1,6 @@
-import {HTMLElement, parse} from "node-html-parser";
-import {ParseError} from "../error/ParseError";
-import {Result} from "../handler";
+import { HTMLElement, parse } from 'node-html-parser';
+import { ParseError } from '../error/ParseError';
+import { Result } from '../handler';
 
 const STREET_INDEX = 0;
 const ESTATE_INDEX = 1;
