@@ -39,7 +39,7 @@ Startup:
 
 1. `docker compose up -d --build` - http://localhost:3333?street=hal
 lub
-2. `npm run run` - http://localhost:3000?street=hal
+2. `npm install` and then `npm run run` - http://localhost:3000?street=hal
 
 
 Tests
