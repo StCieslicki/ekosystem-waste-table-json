@@ -1,6 +1,7 @@
 import { HTMLElement, parse } from 'node-html-parser';
 import { ParseError } from '../error/ParseError';
 import { Result } from '../handler';
+import natsort from "natsort";
 
 const STREET_INDEX = 0;
 const ESTATE_INDEX = 1;
@@ -62,23 +63,12 @@ export function filterByStreet(data: Result[], filter: string) {
 }
 
 export function sortByStreet(data: Result[]) {
+    const sortObject = natsort({ insensitive: true });
+
     // todo fixme - doesn't work
     // @ts-ignore
-    return data.sort((a: Result, b: Result): number => {
-        const nameA = a.street.toLowerCase();
-        const nameB = b.street.toLowerCase();
-
-        if (nameA < nameB) {
-            return -1;
-        }
-
-        if (nameA > nameB) {
-            return 1;
-        }
-
-        if (nameA === nameB) {
-            return 0;
-        }
+    return data.sort((a: Result, b: Result) => {
+        return sortObject(a.street.toLocaleLowerCase(), b.street.toLocaleLowerCase());
     });
 }
 
