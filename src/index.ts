@@ -12,6 +12,8 @@ app.use(cache('1 day'));
 
 const port = 3000;
 
+// because `req` generate error: error TS6133: 'req' is declared but its value is never read.
+// @ts-ignore
 app.get("/health", (req, res) => {
   res.send({ success: true, message: "It is working" });
 });
