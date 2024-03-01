@@ -34,7 +34,6 @@ jobs:
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/.dockerignore" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/compose.yaml" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
       - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tsconfig.json" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
-      - run: cp "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/tslint.json" "/home/runner/work/ekosystem-waste-table-json/ekosystem-waste-table-json/package/"
 
       - name: SSH push
         uses: ErenKrt/ssh-push@main
