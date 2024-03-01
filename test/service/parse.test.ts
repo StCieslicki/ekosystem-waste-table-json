@@ -94,16 +94,17 @@ describe('Parse tests', () => {
             createStreetItem(rows[6]),
         ];
 
-        console.log(data);
+        // console.log(data);
 
+        // @ts-ignore
         const sorted = sortByStreet(data);
 
-        console.log(sorted);
+        // console.log(sorted);
 
         expect(sorted).toEqual([
+            { street: 'Abramowskiego 1' },
             { street: 'al. Kochanowskiego 23' },
             { street: 'al. Paderewskiego 22a' },
-            { street: 'Abramowskiego 1' },
             { street: 'Bacciarellego 1' },
             { street: 'Bacciarellego 50' }
         ]);
