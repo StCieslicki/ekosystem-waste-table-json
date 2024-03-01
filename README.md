@@ -1,6 +1,4 @@
 
-# Typescript module
-
 Table of bulky waste collection for the city of Wroclaw, Poland.
 https://gabaryty.ekosystem.wroc.pl/tabela-wywozu-odpadow/
 

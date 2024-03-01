@@ -69,5 +69,7 @@ COPY --from=build /usr/src/app/lib ./lib
 # Expose the port that the application listens on.
 EXPOSE 3000
 
+HEALTHCHECK CMD curl --fail http://localhost:3000 || exit 1
+
 # Run the application.
 CMD node ./lib/index.js

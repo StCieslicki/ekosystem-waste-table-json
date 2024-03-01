@@ -12,6 +12,10 @@ app.use(cache('1 day'));
 
 const port = 3000;
 
+app.get("/health", (req, res) => {
+  res.send({ success: true, message: "It is working" });
+});
+
 app.get('/', async (req, res) => {
   const { street, ids } = req.query;
 

@@ -48,7 +48,7 @@ export function getRowEstate(htmlRow: HTMLElement): string {
     );
 }
 
-export function getRowGeo(htmlRow:HTMLElement) {
+export function getRowGeo(htmlRow: HTMLElement) {
     const regex = /.+(lat=(\d{1,3}.\d{1,10}))&(lng=(\d{1,3}.\d{1,10})).+/gm;
     const subst = `$2 $4`;
 
@@ -65,8 +65,6 @@ export function filterByStreet(data: Result[], filter: string) {
 export function sortByStreet(data: Result[]) {
     const sortObject = natsort({ insensitive: true });
 
-    // todo fixme - doesn't work
-    // @ts-ignore
     return data.sort((a: Result, b: Result) => {
         return sortObject(a.street.toLocaleLowerCase(), b.street.toLocaleLowerCase());
     });

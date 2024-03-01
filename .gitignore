@@ -219,3 +219,5 @@ Temporary Items
 
 .idea
 lib
+
+trivy.log
