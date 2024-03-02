@@ -4,13 +4,15 @@ import * as express from 'express';
 import * as compression from 'compression';
 import * as apicache from 'apicache';
 
+const DEFAULT_PORT = 3000;
+
 const app = express();
 app.use(compression());
 const cache = apicache.middleware;
 
 app.use(cache('1 day'));
 
-const port = 3000;
+const port = process.env.PORT ? process.env.PORT : DEFAULT_PORT;
 
 // because `req` generate error: error TS6133: 'req' is declared but its value is never read.
 // @ts-ignore
@@ -40,5 +42,5 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server listening on port ${port}`);
 });

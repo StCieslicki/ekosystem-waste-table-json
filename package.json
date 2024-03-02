@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
+    "start": "docker compose up -d --build",
     "test": "jest",
     "build": "tsc",
     "lint": "eslint -c .eslintrc.js --ext .ts ./src/**/*.ts",
     "prerun": "npm run build",
     "run": "node ./lib/index.js",
-    "run-parse": "node ./lib/service/parse.js",
     "scan": "trivy fs --security-checks=config,vuln,secret --severity=CRITICAL,HIGH,MEDIUM,LOW,UNKNOWN --output=./trivy.log ."
   },
   "author": {
